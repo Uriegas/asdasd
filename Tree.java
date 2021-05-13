@@ -28,7 +28,8 @@ private Nodo Nodex;
             case "/":
             case "^":
                 this.Nodex.setRight(pilita.pop());
-                this.Nodex.setLeft(pilita.pop());
+                try{this.Nodex.setLeft(pilita.pop());}
+                catch(Exception e){this.Nodex.setLeft(null);}
                 pilita.push(Nodex);
                 break;
             case "sqrt":
